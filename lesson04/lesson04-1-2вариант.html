@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Матаематическим способом</title>
+	<script type="text/javascript">
+
+		var number = +prompt('Введите число от 0 до 999', '');
+
+		function numberToObject(number){
+
+			var objectNumber = {};
+
+			if (+number >= 0 && +number <= 999) {
+				objectNumber['единицы'] = (number % 100) % 10;
+				objectNumber['десятки'] = (number % 100 - number % 10) / 10;
+				objectNumber['сотни'] = (number - (number % 100)) / 100;
+				return objectNumber;
+			} else {
+				return console.log('Число не входит в указанный диапазон от 0 до 999'), objectNumber;
+			}
+		}
+
+		console.log(numberToObject(number));
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
+

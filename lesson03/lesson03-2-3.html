@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Подсчет стоимости корзины товаров</title>
+	<script type="text/javascript">
+
+		// создаем массив с корзиной, где перечислено наименование товара, масса продукта, итоговая сумма
+
+		var basket = [
+		['яблоки', 1, 100], ['мандарины', 2, 240], ['груши', 1, 130], ['картофель', 3, 85], ['лук', 2, 30]
+		];
+
+		var sum = 0; // первоначально сумма товаров в корзине равна 0
+
+		function countBasketPrice(basket) {
+			for (var i = 0; i < basket.length; i++) {				
+				sum += basket[i][2]; 
+				//в цикле суммируются элемент массива относящийся к стоимости товара, до тех пока не пробежится по всей корзине
+			}
+			return sum;
+		}
+		console.log(countBasketPrice(basket));
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

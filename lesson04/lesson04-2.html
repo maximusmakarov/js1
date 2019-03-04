@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Подсчёт стоимости корзины через объекты товаров</title>
+	<script type="text/javascript">
+		
+		var basket = [
+		{
+			product: 'apples',
+		 	kilogram: 1,
+		 	price: 100,
+		 	summ: 100
+		 },
+		 {
+		 	product: 'tangerines',
+		 	kilogram: 2,
+		 	price: 120,
+		 	summ: 240
+		 },
+		 {
+		 	product: 'pears',
+		 	kilogram: 1,
+		 	price: 130,
+		 	summ: 130
+		 },
+		 {
+		 	product: 'potatos',
+		 	kilogram: 3,
+		 	price: 25,
+		 	summ: 75
+		 },
+		 {
+		 	product: 'onions',
+		 	kilogram: 2,
+		 	price: 15,
+		 	summ: 30
+		 }
+		];
+		var basketCost = 0;
+
+		function countBasketPrice(basket) {
+			for (var i = 0; i < basket.length; i++) {				
+				basketCost += basket[i].summ;				
+			}
+			return basketCost;
+		}
+
+		console.log(countBasketPrice(basket));
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

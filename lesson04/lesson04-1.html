@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Через объекты массива</title>
+	<script type="text/javascript">
+
+		var number = prompt('Введите число от 0 до 999', '');
+
+		function numberToObject(number){
+
+			var digits = number.split('');
+			var objectNumber = {};
+			
+			if (+number >= 0 && +number <= 999) {
+				objectNumber['единицы'] = +digits[number.length - 1];
+				objectNumber['десятки'] = +digits[number.length - 2];
+				objectNumber['сотни'] = +digits[number.length - 3];
+				return objectNumber
+			} else {
+				return console.log('Число не входит в указанный диапазон от 0 до 999'), objectNumber;
+			}
+		}
+
+		console.log(numberToObject(number));
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
+
